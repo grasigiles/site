@@ -1,7 +1,6 @@
 {
     "trailingSlash": false,
     "rewrites": [        
-        { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
-        { "source": "/:path*", "destination": "/index.html" }
+        { "source": "/analisedecoloracaopessoal", "destination": "/analisedecoloracaopessoal.html" }
     ]
 }

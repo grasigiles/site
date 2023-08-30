@@ -1,8 +1,3 @@
 {
-  "rewrites": [
-    {
-      "source": "/servicos/analisedecoloracaopessoal.html",
-      "destination": "/servicos/analisedecoloracaopessoal"
-    }
-  ]
+  "rewrites": [{ "source": "https://site-amber-chi.vercel.app/servicos/analisedecoloracaopessoal", "destination": "https://site-amber-chi.vercel.app/servicos/analisedecoloracaopessoal.html" }]
 }

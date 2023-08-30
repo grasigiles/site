@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/servicos/analisedecoloracaopessoal",
-      "destination": "/servicos/analisedecoloracaopessoal.html"
+      "source": "/src/servicos/analisedecoloracaopessoal",
+      "destination": "/src/servicos/analisedecoloracaopessoal.html"
     }
   ]
 }

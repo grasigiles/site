@@ -1,6 +1,6 @@
 {
     "trailingSlash": false,
     "rewrites": [        
-        { "source": "/servico/analisedecoloracaopessoal", "destination": "/servico/analisedecoloracaopessoal.html" }
+        { "source": "https://site-amber-chi.vercel.app/servicos/analisedecoloracaopessoal", "destination": "https://site-amber-chi.vercel.app/servicos/analisedecoloracaopessoal.html" }
     ]
 }

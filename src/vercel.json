@@ -1,6 +1,5 @@
 {
-  "rewrites": [    
-    "trailingSlash": true,
+  "rewrites": [        
     {
       "source": "/analisedecoloracaopessoal",
       "destination": "/analisedecoloracaopessoal.html"

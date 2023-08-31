@@ -4,6 +4,9 @@
       "source": "/analisedecoloracaopessoal",
       "destination": "/analisedecoloracaopessoal.html"
     },
-    { "source": "/servicos/:path*", "destination": "/servicos/analisedecoloracaopessoal.html" },
+    {
+      "source": "/servicos/:match*",
+      "destination": "https://site-psi-flame.vercel.app/:match*"
+    },
   ]
 }

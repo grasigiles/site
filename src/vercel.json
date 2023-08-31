@@ -1,8 +1,7 @@
-{
+{  
   "redirects": [
-    { "source": "https://site-psi-flame.vercel.app/servicos/analisedecoloracaopessoal", 
-      "destination": "https://site-psi-flame.vercel.app/analisedecoloracaopessoal" }   
-  ],
+    { "source": "/servicos", "destination": "/analisedecoloracaopessoal.html", "permanent": true }
+  ]
   "rewrites": [        
     {
       "source": "/analisedecoloracaopessoal",

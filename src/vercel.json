@@ -6,7 +6,7 @@
     },
     {
       "source": "/servicos/analisedecoloracaopessoal",
-      "destination": "/analisedecoloracaopessoal.html"
+      "destination": "/servicos/analisedecoloracaopessoal.html"
     },
   ]
 }

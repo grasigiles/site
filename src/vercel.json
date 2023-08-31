@@ -6,8 +6,8 @@
       "destination": "/analisedecoloracaopessoal.html"
     },
     {
-      "source": "/servicos/analisedecoloracaopessoal",
-      "destination": "https://site-psi-flame.vercel.app/analisedecoloracaopessoal"
+      "source": "/servicos/:page/",
+      "destination": "/analisedecoloracaopessoal.html"
     },
   ]
 }

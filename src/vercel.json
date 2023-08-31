@@ -7,7 +7,7 @@
     },
     {
       "source": "/servicos/:page/",
-      "destination": "/:page/"
+      "destination": "/:page"
     },
   ]
 }

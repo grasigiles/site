@@ -5,8 +5,8 @@
       "destination": "/analisedecoloracaopessoal.html"
     },
     {
-      "source": "/servicos/:match*",
-      "destination": "/:match*"
+      "source": "/servicos",
+      "destination": "/analisedecoloracaopessoal.html"
     }
   ]
 }

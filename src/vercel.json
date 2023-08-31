@@ -3,10 +3,10 @@
     {
       "source": "/analisedecoloracaopessoal",
       "destination": "/analisedecoloracaopessoal.html"
-    },   
+    },       
     {
-      "source": "/servicos/:match*",
-      "destination": "https://site-psi-flame.vercel.app/:match*"
+      "source": "/servicos/analisedecoloracaopessoal",
+      "destination": "https://google.com"
     },
   ]
 }

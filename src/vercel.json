@@ -1,6 +1,6 @@
 {  
   "redirects": [
-    { "source": "/servicos", "destination": "/analisedecoloracaopessoal.html", "permanent": true }
+    { "source": "/servicos/analisedecoloracaopessoal", "destination": "/analisedecoloracaopessoal.html", "permanent": true }
   ]
   "rewrites": [        
     {

@@ -6,7 +6,7 @@
       "destination": "/analisedecoloracaopessoal.html"
     },
     {
-      "source": "/servicos/:page/",
+      "source": "/servicos/:page",
       "destination": "/:page"
     },
   ]

@@ -3,18 +3,14 @@
     {
       "source": "/analisedecoloracaopessoal",
       "destination": "/analisedecoloracaopessoal.html"
-    },
-    {
-      "source": "/servicos/analisedecoloracaopessoal",
-      "destination": "/servicos/analisedecoloracaopessoal.html"
-    },
+    },   
     {
       "source": "/servicos",
-      "destination": "/servicos/analisedecoloracaopessoal.html"
+      "destination": "/analisedecoloracaopessoal.html"
     },
     {
       "source": "/servicos/:path*",
-      "destination": "/servicos/analisedecoloracaopessoal.html"
+      "destination": "/analisedecoloracaopessoal.html"
     }
   ]
 }

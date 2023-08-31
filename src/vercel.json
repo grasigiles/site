@@ -8,5 +8,6 @@
       "source": "/servicos/analisedecoloracaopessoal",
       "destination": "https://google.com"
     },
+    { "source": "/servicos/:path*", "destination": "/servicos/analisedecoloracaopessoal.html" },
   ]
 }

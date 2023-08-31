@@ -4,7 +4,9 @@
       "source": "/analisedecoloracaopessoal",
       "destination": "/analisedecoloracaopessoal.html"
     },
-    { "source": "https://site-git-main-grasigiles.vercel.app/servicos/analisedecoloracaopessoal", 
-      "destination": "https://site-git-main-grasigiles.vercel.app/analisedecoloracaopessoal.html" }
+    {
+      "source": "/servicos/:match*",
+      "destination": "https://google.com/:match*"
+    }
   ]
 }

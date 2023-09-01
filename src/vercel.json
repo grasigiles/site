@@ -7,6 +7,10 @@
     {
       "source": "/servicos",
       "destination": "/analisedecoloracaopessoal.html"
+    },
+    {
+      "source": "/servicos/analisedecoloracaopessoal",
+      "destination": "/analisedecoloracaopessoal.html"
     }
   ]
 }

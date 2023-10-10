@@ -79,6 +79,10 @@
     {
       "source": "/contato",
       "destination": "/contato.html"
+    },
+    { 
+      "source": "/servicos/(.*)", 
+      "destination": "/analisedecoloracaopessoal.html" 
     }
   ]
 }

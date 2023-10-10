@@ -43,6 +43,14 @@
     {
       "source": "/personal-shopper",
       "destination": "/personalshopper.html"
+    },
+    {
+      "source": "/analisedeestilo",
+      "destination": "/analisedeestilo.html"
+    },
+    {
+      "source": "/analise-de-estilo",
+      "destination": "/analisedeestilo.html"
     }
   ]
 }

@@ -59,6 +59,14 @@
     {
       "source": "/consultoria-completa-de-estilo",
       "destination": "/consultoriacompletadeestilo.html"
+    },
+    {
+      "source": "/fastconsultoria",
+      "destination": "/fastconsultoria.html"
+    },
+    {
+      "source": "/fast-consultoria",
+      "destination": "/fastconsultoria.html"
     }
   ]
 }

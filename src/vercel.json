@@ -35,6 +35,14 @@
     {
       "source": "/criacao-de-looks",
       "destination": "/criacaodelooks.html"
+    },
+    {
+      "source": "/personalshopper",
+      "destination": "/personalshopper.html"
+    },
+    {
+      "source": "/personal-shopper",
+      "destination": "/personalshopper.html"
     }
   ]
 }

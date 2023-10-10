@@ -83,6 +83,10 @@
     { 
       "source": "/servicos/analisedecoloracaopessoal", 
       "destination": "/analisedecoloracaopessoal" 
+    },
+    { 
+      "source": "/servicos/personalshopper", 
+      "destination": "/personalshopper" 
     }
   ]
 }

@@ -82,7 +82,7 @@
     },
     { 
       "source": "/servicos/(.*)", 
-      "destination": "/analisedecoloracaopessoal.html" 
+      "destination": "/analisedecoloracaopessoal" 
     }
   ]
 }

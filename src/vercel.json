@@ -15,6 +15,10 @@
     {
       "source": "/servicos",
       "destination": "/analisedecoloracaopessoal.html"
+    },
+    {
+      "source": "/analisedeguardaroupa",
+      "destination": "/analisedeguardaroupa.html"
     }
   ]
 }

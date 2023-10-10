@@ -67,6 +67,18 @@
     {
       "source": "/fast-consultoria",
       "destination": "/fastconsultoria.html"
+    },
+    {
+      "source": "/agenda",
+      "destination": "/agenda.html"
+    },
+    {
+      "source": "/sobre",
+      "destination": "/sobre.html"
+    },
+    {
+      "source": "/contato",
+      "destination": "/contato.html"
     }
   ]
 }

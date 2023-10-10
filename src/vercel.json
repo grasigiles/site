@@ -13,6 +13,10 @@
       "destination": "/analisedecoloracaopessoal.html"
     },
     {
+      "source": "/analise-de-coloracao-pessoal",
+      "destination": "/analisedecoloracaopessoal.html"
+    },
+    {
       "source": "/servicos",
       "destination": "/analisedecoloracaopessoal.html"
     },
@@ -23,6 +27,14 @@
     {
       "source": "/analise-de-guarda-roupa",
       "destination": "/analisedeguardaroupa.html"
+    },
+    {
+      "source": "/criacaodelooks",
+      "destination": "/criacaodelooks.html"
+    },
+    {
+      "source": "/criacao-de-looks",
+      "destination": "/criacaodelooks.html"
     }
   ]
 }

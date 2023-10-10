@@ -51,6 +51,14 @@
     {
       "source": "/analise-de-estilo",
       "destination": "/analisedeestilo.html"
+    },
+    {
+      "source": "/consultoriacompletadeestilo",
+      "destination": "/consultoriacompletadeestilo.html"
+    },
+    {
+      "source": "/consultoria-completa-de-estilo",
+      "destination": "/consultoriacompletadeestilo.html"
     }
   ]
 }

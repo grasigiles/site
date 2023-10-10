@@ -81,7 +81,7 @@
       "destination": "/contato.html"
     },
     { 
-      "source": "/servicos/(.*)", 
+      "source": "/servicos/analisedecoloracaopessoal", 
       "destination": "/analisedecoloracaopessoal" 
     }
   ]

@@ -19,6 +19,10 @@
     {
       "source": "/analisedeguardaroupa",
       "destination": "/analisedeguardaroupa.html"
+    },
+    {
+      "source": "/analise-de-guarda-roupa",
+      "destination": "/analisedeguardaroupa.html"
     }
   ]
 }

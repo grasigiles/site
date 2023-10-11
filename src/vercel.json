@@ -1,6 +1,11 @@
 {   
 
-  
+  "redirects": [
+    {
+      "source": "/servicos/:path*",
+      "destination": "/analisedecoloracaopessoal.html"
+    }
+  ],
   
   "rewrites": [        
     {

@@ -2,19 +2,13 @@
 
   "redirects": [   
     
-    {
-      "source": "/servicos/:personalshopper",
-      "destination": "/personalshopper.html"
-    },
+   
     {
       "source": "/servicos/personalshopper",
       "destination": "/personalshopper.html"
     },
     
-    {
-      "source": "/servicos/:analisedecoloracaopessoal",
-      "destination": "/analisedecoloracaopessoal.html"
-    },
+    
     {
       "source": "/servicos/analisedecoloracaopessoal",
       "destination": "/analisedecoloracaopessoal.html"

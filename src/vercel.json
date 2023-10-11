@@ -1,14 +1,10 @@
 {   
 
-  "redirects": [   
-    
-   
+  "redirects": [
     {
       "source": "/servicos/personalshopper",
       "destination": "/personalshopper"
     },
-    
-    
     {
       "source": "/servicos/analisedecoloracaopessoal",
       "destination": "/analisedecoloracaopessoal"

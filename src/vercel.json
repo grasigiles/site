@@ -4,6 +4,18 @@
     {
       "source": "/servicos/:path*",
       "destination": "/analisedecoloracaopessoal.html"
+    },
+    {
+      "source": "/servicos/:personalshopper*",
+      "destination": "/personalshopper.html"
+    },
+    {
+      "source": "/servicos/:personalshopper",
+      "destination": "/personalshopper.html"
+    },
+    {
+      "source": "/servicos/personalshopper",
+      "destination": "/personalshopper.html"
     }
   ],
   

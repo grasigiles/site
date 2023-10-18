@@ -55,9 +55,9 @@ $("#resultado").click(function (e) {
 
     if (total < 15) { $('#aviso').css('display', 'block').html('Selecione pelo menos 15 tipos de personalidades').css('color', 'red'); return;}
         
-    var one = retornarNumeroEstilo(array[6][0]);
-    var two = retornarNumeroEstilo(array[5][0]);
-    var three = retornarNumeroEstilo(array[4][0]);
+    var one = retornarNumeroEstilo(array[0][0]);
+    var two = retornarNumeroEstilo(array[1][0]);
+    var three = retornarNumeroEstilo(array[2][0]);
 
     window.location.href = "/meuestilo-resultado.html?one=" + one + "&two=" + two + "&three=" + three;
 

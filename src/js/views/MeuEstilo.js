@@ -1,21 +1,84 @@
-﻿$("#resultado").click(function (e) {    
+﻿var esportivo = 0;
+    var tradicional = 0;
+    var contemporanio = 0;
+    var romatico = 0;
+    var sexy = 0;
+    var criativo = 0;
+    var dramatico = 0;
+
+$("#resultado").click(function (e) {    
     $('#aviso').css('display', 'none');
     var list = "";
     var total = 0;
 
-    if ($("#nome").val() == "") { $('#aviso').css('display', 'block').html('Preencha o campo nome').css('color', 'red'); return;}
-    if (!isValidEmail($("#email").val())) { $('#aviso').css('display', 'block').html('Preencha o campo e-mail').css('color', 'red'); return; }
-
+    //if ($("#nome").val() == "") { $('#aviso').css('display', 'block').html('Preencha o campo nome').css('color', 'red'); return;}
+    //if (!isValidEmail($("#email").val())) { $('#aviso').css('display', 'block').html('Preencha o campo e-mail').css('color', 'red'); return; }
 
     $(":checkbox:checked").each(function (e) {
-        list += $(this).val() + ",";
+        
+        var iNum = parseInt($(this).val());
+
+        if(iNum >= 1 && iNum <= 10)
+            esportivo += 1;
+        else if(iNum >= 11 && iNum <= 20)
+            tradicional += 1;
+        else if(iNum >= 21 && iNum <= 30)
+            contemporanio += 1;
+        else if(iNum >= 31 && iNum <= 40)
+            romatico += 1;
+        else if(iNum >= 41 && iNum <= 50)
+            sexy += 1;
+        else if(iNum >= 51 && iNum <= 60)
+            criativo += 1;
+        else if(iNum >= 61 && iNum <= 70)
+            dramatico += 1;
+
         total += 1;
     });
 
-    if (list == "" || total < 15) { $('#aviso').css('display', 'block').html('Selecione pelo menos 15 tipos de personalidades').css('color', 'red'); return;}
+    var array = [['esportivo', esportivo],
+        ['tradicional', tradicional],
+        ['contemporanio', contemporanio],
+        ['romantico', romatico],
+        ['sexy', sexy],
+        ['criativo',criativo],
+        ['dramatico', dramatico]
+    ];
+
+    array.sort(function(a, b){
+         var a1= a[1], b1= b[1];
+         if(a1== b1) return 0;
+         return a1> b1? 1: -1;
+    });
+
+    array.reverse();
+
+    if (total < 15) { $('#aviso').css('display', 'block').html('Selecione pelo menos 15 tipos de personalidades').css('color', 'red'); return;}
         
-    submit(list);
+    var one = retornarNumeroEstilo(array[6][0]);
+    var two = retornarNumeroEstilo(array[5][0]);
+    var three = retornarNumeroEstilo(array[4][0]);
+
+    window.location.href = "/meuestilo-resultado.html?one=" + one + "&two=" + two + "&three=" + three;
+
 });
+
+function retornarNumeroEstilo(estilo){
+    if(estilo == 'esportivo')
+        return 1;
+    else if(estilo == 'tradicional')
+        return 2;
+    else if(estilo == 'contemporanio')
+        return 3;
+    else if(estilo == 'romantico')
+        return 4;
+    else if(estilo == 'sexy')
+        return 5;
+    else if(estilo == 'criativo')
+        return 6;
+    else if(estilo == 'dramatico')
+        return 7;
+}
 
 function isValidEmail(emailText) {
     var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
@@ -25,25 +88,29 @@ function isValidEmail(emailText) {
 function submit(list) {
     
     list = list.substr(0, list.length - 1);
-    var nome = $('#nome').val();
-    var email = $('#email').val();
+    $('#aviso').css('display', 'block').html('Processando sua análise, por favor aguarde...').css('color', 'black');
 
-    $.ajax({
-        url: '/MeuEstilo/Gravar?personalidades=' + list + '&nome=' + nome + '&email=' + email,
-        format: 'JSON',
-        method: 'POST',
-        contentType: "application/json; utf-8",
-        beforeSend: function () {
-            $('#aviso').css('display', 'block').html('Processando sua análise, por favor aguarde...').css('color', 'black');
-        },
-        success: function (data) {
-            if (data.Success)
-                window.location.href = "/MeuEstilo/Resultado?c=" + data.Email;
-        },
-        error: function (erro) {
-            $('#aviso').css('display', 'block').html('Ocorreu um erro, por favor tente novamente').css('color', 'red');
-        }
-    });
+
+
+    // var nome = $('#nome').val();
+    // var email = $('#email').val();
+
+    // $.ajax({
+    //     url: '/MeuEstilo/Gravar?personalidades=' + list + '&nome=' + nome + '&email=' + email,
+    //     format: 'JSON',
+    //     method: 'POST',
+    //     contentType: "application/json; utf-8",
+    //     beforeSend: function () {
+    //         $('#aviso').css('display', 'block').html('Processando sua análise, por favor aguarde...').css('color', 'black');
+    //     },
+    //     success: function (data) {
+    //         if (data.Success)
+    //             window.location.href = "/MeuEstilo/Resultado?c=" + data.Email;
+    //     },
+    //     error: function (erro) {
+    //         $('#aviso').css('display', 'block').html('Ocorreu um erro, por favor tente novamente').css('color', 'red');
+    //     }
+    // });
 }
 
 $("#js-wizard-form").validate({
@@ -72,31 +139,34 @@ $("#voltar").click(function (e) {
 
 $("#codigo-ativacao-avancar").click(function (e) {
     
-    if ($("#codigo-ativacao").val() == "") {        
-        $('#aviso-codigo-ativacao').css('display', 'block');
-        return;
-    }
-    else {        
-        $('#aviso-codigo-ativacao').css('display', 'none');
+    $('#aviso-codigo-ativacao').css('display', 'none');
+    $("#avancar-tab1").trigger("click");
 
-        $.ajax({
-            url: '/MeuEstilo/ValidarCodigoAtivacao?codigoAtivacao=' + $('#codigo-ativacao').val(),
-            format: 'JSON',
-            method: 'GET',
-            contentType: "application/json; utf-8",        
-            success: function (data) {
-                if (data.Success) {
-                    $('#aviso-codigo-ativacao').css('display', 'none');
-                    $("#avancar-tab1").trigger("click");
-                }   
-                else
-                    $('#aviso-codigo-ativacao').css('display', 'block');
-            },
-            error: function (erro) {
-                $('#aviso-codigo-ativacao').css('display', 'none');
-            }
-        });        
-    }
+    // if ($("#codigo-ativacao").val() == "") {        
+    //     $('#aviso-codigo-ativacao').css('display', 'block');
+    //     return;
+    // }
+    // else {        
+    //     $('#aviso-codigo-ativacao').css('display', 'none');
+
+    //     $.ajax({
+    //         url: '/MeuEstilo/ValidarCodigoAtivacao?codigoAtivacao=' + $('#codigo-ativacao').val(),
+    //         format: 'JSON',
+    //         method: 'GET',
+    //         contentType: "application/json; utf-8",        
+    //         success: function (data) {
+    //             if (data.Success) {
+    //                 $('#aviso-codigo-ativacao').css('display', 'none');
+    //                 $("#avancar-tab1").trigger("click");
+    //             }   
+    //             else
+    //                 $('#aviso-codigo-ativacao').css('display', 'block');
+    //         },
+    //         error: function (erro) {
+    //             $('#aviso-codigo-ativacao').css('display', 'none');
+    //         }
+    //     });        
+    // }
     
 });
 

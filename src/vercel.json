@@ -91,6 +91,10 @@
     { 
       "source": "/servicos/personalshopper", 
       "destination": "/personalshopper" 
+    },
+    { 
+      "source": "/meuestilo", 
+      "destination": "/meuestilo.html" 
     }
   ]
 }

@@ -71,6 +71,7 @@ $("#resultado").click(function (e) {
     var three = retornarNumeroEstilo(array[2][1]);
 
     array = [];
+    $('input:checkbox').removeAttr('checked');
 
     window.location.href = "/meuestilo-resultado.html?one=" + one + "&two=" + two + "&three=" + three;
 

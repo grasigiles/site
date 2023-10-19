@@ -1,10 +1,10 @@
 ﻿var esportivo = 0;
-    var tradicional = 0;
-    var contemporanio = 0;
-    var romatico = 0;
-    var sexy = 0;
-    var criativo = 0;
-    var dramatico = 0;
+var tradicional = 0;
+var contemporanio = 0;
+var romatico = 0;
+var sexy = 0;
+var criativo = 0;
+var dramatico = 0;
 
 $("#resultado").click(function (e) {    
     $('#aviso').css('display', 'none');
@@ -36,28 +36,39 @@ $("#resultado").click(function (e) {
         total += 1;
     });
 
-    var array = [['esportivo', esportivo],
-        ['tradicional', tradicional],
-        ['contemporanio', contemporanio],
-        ['romantico', romatico],
-        ['sexy', sexy],
-        ['criativo',criativo],
-        ['dramatico', dramatico]
+    // var array = [['esportivo', esportivo],
+    //     ['tradicional', tradicional],
+    //     ['contemporanio', contemporanio],
+    //     ['romantico', romatico],
+    //     ['sexy', sexy],
+    //     ['criativo',criativo],
+    //     ['dramatico', dramatico]
+    // ];
+
+    var array = [[esportivo, 'esportivo'],
+        [tradicional, 'tradicional'],
+        [contemporanio, 'contemporanio'],
+        [romatico, 'romantico'],
+        [sexy, 'sexy'],
+        [criativo, 'criativo'],
+        [dramatico, 'dramatico']
     ];
 
-    array.sort(function(a, b){
-         var a1= a[1], b1= b[1];
-         if(a1== b1) return 0;
-         return a1> b1? 1: -1;
-    });
+    array.sort();
+
+    // array.sort(function(a, b){
+    //      var a1= a[1], b1= b[1];
+    //      if(a1== b1) return 0;
+    //      return a1> b1? 1: -1;
+    // });
 
     array.reverse();
 
     if (total < 15) { $('#aviso').css('display', 'block').html('Selecione pelo menos 15 tipos de personalidades').css('color', 'red'); return;}
         
-    var one = retornarNumeroEstilo(array[0][0]);
-    var two = retornarNumeroEstilo(array[1][0]);
-    var three = retornarNumeroEstilo(array[2][0]);
+    var one = retornarNumeroEstilo(array[0][1]);
+    var two = retornarNumeroEstilo(array[1][1]);
+    var three = retornarNumeroEstilo(array[2][1]);
 
     window.location.href = "/meuestilo-resultado.html?one=" + one + "&two=" + two + "&three=" + three;
 

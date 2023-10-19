@@ -65,13 +65,16 @@ $("#resultado").click(function (e) {
     array.reverse();
 
     if (total < 15) { $('#aviso').css('display', 'block').html('Selecione pelo menos 15 tipos de personalidades').css('color', 'red'); return;}
-        
+    
+    // $('input:checkbox').removeAttr('checked');
+    // $('input[type=checkbox]').prop('checked',false);
+
     var one = retornarNumeroEstilo(array[0][1]);
     var two = retornarNumeroEstilo(array[1][1]);
     var three = retornarNumeroEstilo(array[2][1]);
 
     array = [];
-    $('input:checkbox').removeAttr('checked');
+    
 
     window.location.href = "/meuestilo-resultado.html?one=" + one + "&two=" + two + "&three=" + three;
 

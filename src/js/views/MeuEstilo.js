@@ -36,44 +36,36 @@ $("#resultado").click(function (e) {
         total += 1;
     });
 
-    // var array = [['esportivo', esportivo],
-    //     ['tradicional', tradicional],
-    //     ['contemporanio', contemporanio],
-    //     ['romantico', romatico],
-    //     ['sexy', sexy],
-    //     ['criativo',criativo],
-    //     ['dramatico', dramatico]
-    // ];
-
-    var array = [[esportivo, 'esportivo'],
-        [tradicional, 'tradicional'],
-        [contemporanio, 'contemporanio'],
-        [romatico, 'romantico'],
-        [sexy, 'sexy'],
-        [criativo, 'criativo'],
-        [dramatico, 'dramatico']
-    ];
-
-    array.sort();
-
-    // array.sort(function(a, b){
-    //      var a1= a[1], b1= b[1];
-    //      if(a1== b1) return 0;
-    //      return a1> b1? 1: -1;
-    // });
-
-    array.reverse();
+    let estilos = {
+        esportivo: esportivo, 
+        tradicional: tradicional, 
+        contemporanio: contemporanio, 
+        romantico: romatico,
+        sexy: sexy, 
+        criativo: criativo,
+        dramatico: dramatico
+    };
+    let sortable = [];
+    for (var estilo in estilos) {
+        sortable.push([estilo, estilos[estilo]]);
+    }
+    
+    sortable.sort(function(a, b) {
+        return a[1] - b[1];
+    });   
+    
 
     if (total < 15) { $('#aviso').css('display', 'block').html('Selecione pelo menos 15 tipos de personalidades').css('color', 'red'); return;}
     
     // $('input:checkbox').removeAttr('checked');
     // $('input[type=checkbox]').prop('checked',false);
 
-    var one = retornarNumeroEstilo(array[0][1]);
-    var two = retornarNumeroEstilo(array[1][1]);
-    var three = retornarNumeroEstilo(array[2][1]);
+    var one = retornarNumeroEstilo(sortable[6][1]);
+    var two = retornarNumeroEstilo(sortable[5][1]);
+    var three = retornarNumeroEstilo(sortable[4][1]);
 
-    array = [];
+    estilos = [];
+    sortable = [];
     
 
     window.location.href = "/meuestilo-resultado.html?one=" + one + "&two=" + two + "&three=" + three;

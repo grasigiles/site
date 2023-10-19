@@ -70,6 +70,8 @@ $("#resultado").click(function (e) {
     var two = retornarNumeroEstilo(array[1][1]);
     var three = retornarNumeroEstilo(array[2][1]);
 
+    array = [];
+
     window.location.href = "/meuestilo-resultado.html?one=" + one + "&two=" + two + "&three=" + three;
 
 });

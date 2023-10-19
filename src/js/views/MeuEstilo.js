@@ -60,9 +60,9 @@ $("#resultado").click(function (e) {
     // $('input:checkbox').removeAttr('checked');
     // $('input[type=checkbox]').prop('checked',false);
 
-    var one = retornarNumeroEstilo(sortable[6][1]);
-    var two = retornarNumeroEstilo(sortable[5][1]);
-    var three = retornarNumeroEstilo(sortable[4][1]);
+    var one = retornarNumeroEstilo(sortable[6][0]);
+    var two = retornarNumeroEstilo(sortable[5][0]);
+    var three = retornarNumeroEstilo(sortable[4][0]);
 
     estilos = [];
     sortable = [];

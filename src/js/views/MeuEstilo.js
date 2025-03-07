@@ -6,7 +6,7 @@ var sexy = 0;
 var criativo = 0;
 var dramatico = 0;
 
-$("#resultado").click(function (e) {    
+$("#resultado").click(function (e) {
     $('#aviso').css('display', 'none');
     var list = "";
     var total = 0;
@@ -15,33 +15,33 @@ $("#resultado").click(function (e) {
     //if (!isValidEmail($("#email").val())) { $('#aviso').css('display', 'block').html('Preencha o campo e-mail').css('color', 'red'); return; }
 
     $(":checkbox:checked").each(function (e) {
-        
+
         var iNum = parseInt($(this).val());
 
-        if(iNum >= 1 && iNum <= 10)
+        if (iNum >= 1 && iNum <= 10)
             esportivo += 1;
-        else if(iNum >= 11 && iNum <= 20)
+        else if (iNum >= 11 && iNum <= 20)
             tradicional += 1;
-        else if(iNum >= 21 && iNum <= 30)
+        else if (iNum >= 21 && iNum <= 30)
             contemporanio += 1;
-        else if(iNum >= 31 && iNum <= 40)
+        else if (iNum >= 31 && iNum <= 40)
             romatico += 1;
-        else if(iNum >= 41 && iNum <= 50)
+        else if (iNum >= 41 && iNum <= 50)
             sexy += 1;
-        else if(iNum >= 51 && iNum <= 60)
+        else if (iNum >= 51 && iNum <= 60)
             criativo += 1;
-        else if(iNum >= 61 && iNum <= 70)
+        else if (iNum >= 61 && iNum <= 70)
             dramatico += 1;
 
         total += 1;
     });
 
     let estilos = {
-        esportivo: esportivo, 
-        tradicional: tradicional, 
-        contemporanio: contemporanio, 
+        esportivo: esportivo,
+        tradicional: tradicional,
+        contemporanio: contemporanio,
         romantico: romatico,
-        sexy: sexy, 
+        sexy: sexy,
         criativo: criativo,
         dramatico: dramatico
     };
@@ -49,14 +49,14 @@ $("#resultado").click(function (e) {
     for (var estilo in estilos) {
         sortable.push([estilo, estilos[estilo]]);
     }
-    
-    sortable.sort(function(a, b) {
-        return a[1] - b[1];
-    });   
-    
 
-    if (total < 15) { $('#aviso').css('display', 'block').html('Selecione pelo menos 15 tipos de personalidades').css('color', 'red'); return;}
-    
+    sortable.sort(function (a, b) {
+        return a[1] - b[1];
+    });
+
+
+    if (total < 15) { $('#aviso').css('display', 'block').html('Selecione pelo menos 15 tipos de personalidades').css('color', 'red'); return; }
+
     // $('input:checkbox').removeAttr('checked');
     // $('input[type=checkbox]').prop('checked',false);
 
@@ -66,26 +66,26 @@ $("#resultado").click(function (e) {
 
     estilos = [];
     sortable = [];
-    
+
 
     window.location.href = "/meuestilo-resultado.html?one=" + one + "&two=" + two + "&three=" + three;
 
 });
 
-function retornarNumeroEstilo(estilo){
-    if(estilo == 'esportivo')
+function retornarNumeroEstilo(estilo) {
+    if (estilo == 'esportivo')
         return 1;
-    else if(estilo == 'tradicional')
+    else if (estilo == 'tradicional')
         return 2;
-    else if(estilo == 'contemporanio')
+    else if (estilo == 'contemporanio')
         return 3;
-    else if(estilo == 'romantico')
+    else if (estilo == 'romantico')
         return 4;
-    else if(estilo == 'sexy')
+    else if (estilo == 'sexy')
         return 5;
-    else if(estilo == 'criativo')
+    else if (estilo == 'criativo')
         return 6;
-    else if(estilo == 'dramatico')
+    else if (estilo == 'dramatico')
         return 7;
 }
 
@@ -95,7 +95,7 @@ function isValidEmail(emailText) {
 };
 
 function submit(list) {
-    
+
     list = list.substr(0, list.length - 1);
     $('#aviso').css('display', 'block').html('Processando sua análise, por favor aguarde...').css('color', 'black');
 
@@ -133,7 +133,7 @@ $("#js-wizard-form").validate({
         $(element).removeClass(errorClass);
     },
     rules: {
-        nome: { required: true },        
+        nome: { required: true },
         email: { required: true, email: true }
     },
     messages: {
@@ -143,40 +143,49 @@ $("#js-wizard-form").validate({
 });
 
 $("#voltar").click(function (e) {
-    $('#aviso').css('display', 'none');    
+    $('#aviso').css('display', 'none');
 });
 
 $("#codigo-ativacao-avancar").click(function (e) {
-    
+
     $('#aviso-codigo-ativacao').css('display', 'none');
     $("#avancar-tab1").trigger("click");
 
-    // if ($("#codigo-ativacao").val() == "") {        
-    //     $('#aviso-codigo-ativacao').css('display', 'block');
-    //     return;
-    // }
-    // else {        
-    //     $('#aviso-codigo-ativacao').css('display', 'none');
+    if ($("#codigo-ativacao").val() == "") {
+        $('#aviso-codigo-ativacao').css('display', 'block');
+        return;
+    }
+    else {
+        $('#aviso-codigo-ativacao').css('display', 'none');
 
-    //     $.ajax({
-    //         url: '/MeuEstilo/ValidarCodigoAtivacao?codigoAtivacao=' + $('#codigo-ativacao').val(),
-    //         format: 'JSON',
-    //         method: 'GET',
-    //         contentType: "application/json; utf-8",        
-    //         success: function (data) {
-    //             if (data.Success) {
-    //                 $('#aviso-codigo-ativacao').css('display', 'none');
-    //                 $("#avancar-tab1").trigger("click");
-    //             }   
-    //             else
-    //                 $('#aviso-codigo-ativacao').css('display', 'block');
-    //         },
-    //         error: function (erro) {
-    //             $('#aviso-codigo-ativacao').css('display', 'none');
-    //         }
-    //     });        
-    // }
-    
+        if ($('#codigo-ativacao').val().toLowerCase() == "original") {
+            $('#aviso-codigo-ativacao').css('display', 'none');
+            $("#avancar-tab1").trigger("click");
+        }
+        else {
+            $('#aviso-codigo-ativacao').css('display', 'block');
+        }
+
+
+        //     $.ajax({
+        //         url: '/MeuEstilo/ValidarCodigoAtivacao?codigoAtivacao=' + $('#codigo-ativacao').val(),
+        //         format: 'JSON',
+        //         method: 'GET',
+        //         contentType: "application/json; utf-8",        
+        //         success: function (data) {
+        //             if (data.Success) {
+        //                 $('#aviso-codigo-ativacao').css('display', 'none');
+        //                 $("#avancar-tab1").trigger("click");
+        //             }   
+        //             else
+        //                 $('#aviso-codigo-ativacao').css('display', 'block');
+        //         },
+        //         error: function (erro) {
+        //             $('#aviso-codigo-ativacao').css('display', 'none');
+        //         }
+        //     });        
+    }
+
 });
 
 

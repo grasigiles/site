@@ -22,124 +22,126 @@ var descricaoSexy = 'O estilo sexy é a escolha das mulheres sedutoras, desinibi
 var descricaoCriativo = 'Mulheres com estilo criativo são inovadoras, anticonvencionais e livres, elas ditam sua própria moda, construindo uma imagem independente e única. Elas têm um amor por misturar estampas, criar sobreposições e experimentar combinações de cores ousadas. Um toque étnico é sempre bem-vindo, adicionando um elemento único e exclusivo ao visual. <br><br> <b>Dicas de investimento:</b> É importante ter um pouco de cautela para evitar sobrecarregar a produção e prestar atenção ao equilíbrio visual das combinações. Concentrar a criatividade nos detalhes pode ser um bom ponto de partida para quem tem esse estilo e deseja expressá-lo com facilidade e harmonia.';
 var descricaoDramatico = 'O estilo dramático projeta uma imagem de mulher forte, criativa, sofisticada e ultra moderna. Cores essenciais incluem preto e cinza, mas há espaço para contraste com cores vibrantes. Linhas retas, estampas ousadas, modelagens estruturadas e volumes exagerados são características proeminentes. Os acessórios apresentam designs arrojados, e os coturnos são peças-chave, assim como o jeans destroyed. <br><br> <b>Dicas de investimento:</b> Para equilibrar os volumes e cores e criar um visual mais leve e harmonioso, é importante considerar peças monocromáticas, que são ótimas opções para esse estilo.';
 
-$( document ).ready(function() {
+$(document).ready(function () {
     var one = getUrlVars()["one"];
     var two = getUrlVars()["two"];
     var three = getUrlVars()["three"];
-    
-    if(one != 'undefined') {
-        if(one == "1"){            
+
+    if (one != 'undefined') {
+        if (one == "1") {
             $("#titulo-estilo-one").html(tituloEsportivo);
-            $("#image-estilo-one").attr("src",imageEsportivo);
+            $("#image-estilo-one").attr("src", imageEsportivo);
             $("#descricao_estilo_one").html(descricaoEsportivo);
         }
-        else if(one == "2"){            
+        else if (one == "2") {
             $("#titulo-estilo-one").html(tituloTradicional);
-            $("#image-estilo-one").attr("src",imageTradicional);
+            $("#image-estilo-one").attr("src", imageTradicional);
             $("#descricao_estilo_one").html(descricaoTradicional);
         }
-        else if(one == "3"){            
+        else if (one == "3") {
             $("#titulo-estilo-one").html(tituloContemporaneo);
-            $("#image-estilo-one").attr("src",imageContemporanio);
+            $("#image-estilo-one").attr("src", imageContemporanio);
             $("#descricao_estilo_one").html(descricaoContemporaneo);
         }
-        else if(one == "4"){            
+        else if (one == "4") {
             $("#titulo-estilo-one").html(tituloRomantico);
-            $("#image-estilo-one").attr("src",imageRomantico);
+            $("#image-estilo-one").attr("src", imageRomantico);
             $("#descricao_estilo_one").html(descricaoRomantico);
         }
-        else if(one == "5"){            
+        else if (one == "5") {
             $("#titulo-estilo-one").html(tituloSexy);
-            $("#image-estilo-one").attr("src",imageSexy);
+            $("#image-estilo-one").attr("src", imageSexy);
             $("#descricao_estilo_one").html(descricaoSexy);
         }
-        else if(one == "6"){            
+        else if (one == "6") {
             $("#titulo-estilo-one").html(tituloCriativo);
-            $("#image-estilo-one").attr("src",imageCriativo);
+            $("#image-estilo-one").attr("src", imageCriativo);
             $("#descricao_estilo_one").html(descricaoCriativo);
         }
-        else if(one == "7"){            
+        else if (one == "7") {
             $("#titulo-estilo-one").html(tituloDramatico);
-            $("#image-estilo-one").attr("src",imageDramatico);
+            $("#image-estilo-one").attr("src", imageDramatico);
             $("#descricao_estilo_one").html(descricaoDramatico);
         }
     }
 
-    if(two != 'undefined') {
-        if(two == "1"){            
+    if (two != 'undefined') {
+        if (two == "1") {
             $("#titulo-estilo-two").html(tituloEsportivo);
-            $("#image-estilo-two").attr("src",imageEsportivo);
+            $("#image-estilo-two").attr("src", imageEsportivo);
             $("#div-leia-1").html(descricaoEsportivo);
         }
-        else if(two == "2"){            
+        else if (two == "2") {
             $("#titulo-estilo-two").html(tituloTradicional);
-            $("#image-estilo-two").attr("src",imageTradicional);
+            $("#image-estilo-two").attr("src", imageTradicional);
             $("#div-leia-1").html(descricaoTradicional);
         }
-        else if(two == "3"){            
+        else if (two == "3") {
             $("#titulo-estilo-two").html(tituloContemporaneo);
-            $("#image-estilo-two").attr("src",imageContemporanio);
+            $("#image-estilo-two").attr("src", imageContemporanio);
             $("#div-leia-1").html(descricaoContemporaneo);
         }
-        else if(two == "4"){            
+        else if (two == "4") {
             $("#titulo-estilo-two").html(tituloRomantico);
-            $("#image-estilo-two").attr("src",imageRomantico);
+            $("#image-estilo-two").attr("src", imageRomantico);
             $("#div-leia-1").html(descricaoRomantico);
         }
-        else if(two == "5"){            
+        else if (two == "5") {
             $("#titulo-estilo-two").html(tituloSexy);
-            $("#image-estilo-two").attr("src",imageSexy);
+            $("#image-estilo-two").attr("src", imageSexy);
             $("#div-leia-1").html(descricaoSexy);
         }
-        else if(two == "6"){            
+        else if (two == "6") {
             $("#titulo-estilo-two").html(tituloCriativo);
-            $("#image-estilo-two").attr("src",imageCriativo);
+            $("#image-estilo-two").attr("src", imageCriativo);
             $("#div-leia-1").html(descricaoCriativo);
         }
-        else if(two == "7"){            
+        else if (two == "7") {
             $("#titulo-estilo-two").html(tituloDramatico);
-            $("#image-estilo-two").attr("src",imageDramatico);
+            $("#image-estilo-two").attr("src", imageDramatico);
             $("#div-leia-1").html(descricaoDramatico);
         }
     }
 
-    if(three != 'undefined') {
-        if(three == "1"){            
+    if (three != 'undefined') {
+        if (three == "1") {
             $("#titulo-estilo-three").html(tituloEsportivo);
-            $("#image-estilo-three").attr("src",imageEsportivo);
+            $("#image-estilo-three").attr("src", imageEsportivo);
             $("#div-leia-2").html(descricaoEsportivo);
         }
-        else if(three == "2"){            
+        else if (three == "2") {
             $("#titulo-estilo-three").html(tituloTradicional);
-            $("#image-estilo-three").attr("src",imageTradicional);
+            $("#image-estilo-three").attr("src", imageTradicional);
             $("#div-leia-2").html(descricaoTradicional);
         }
-        else if(three == "3"){            
+        else if (three == "3") {
             $("#titulo-estilo-three").html(tituloContemporaneo);
-            $("#image-estilo-three").attr("src",imageContemporanio);
+            $("#image-estilo-three").attr("src", imageContemporanio);
             $("#div-leia-2").html(descricaoContemporaneo);
         }
-        else if(three == "4"){            
+        else if (three == "4") {
             $("#titulo-estilo-three").html(tituloRomantico);
-            $("#image-estilo-three").attr("src",imageRomantico);
+            $("#image-estilo-three").attr("src", imageRomantico);
             $("#div-leia-2").html(descricaoRomantico);
         }
-        else if(three == "5"){            
+        else if (three == "5") {
             $("#titulo-estilo-three").html(tituloSexy);
-            $("#image-estilo-three").attr("src",imageSexy);
+            $("#image-estilo-three").attr("src", imageSexy);
             $("#div-leia-2").html(descricaoSexy);
         }
-        else if(three == "6"){            
+        else if (three == "6") {
             $("#titulo-estilo-three").html(tituloCriativo);
-            $("#image-estilo-three").attr("src",imageCriativo);
+            $("#image-estilo-three").attr("src", imageCriativo);
             $("#div-leia-2").html(descricaoCriativo);
         }
-        else if(three == "7"){            
+        else if (three == "7") {
             $("#titulo-estilo-three").html(tituloDramatico);
-            $("#image-estilo-three").attr("src",imageDramatico);
+            $("#image-estilo-three").attr("src", imageDramatico);
             $("#div-leia-2").html(descricaoDramatico);
         }
     }
+
+    document.getElementById('whatsapp-share-button').href = "https://api.whatsapp.com/send?text=" + encodeURIComponent(window.location.href);
 
 
 });
@@ -147,9 +149,9 @@ $( document ).ready(function() {
 
 function getUrlVars() {
     var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
-    function(m,key,value) {
-      vars[key] = value;
-    });
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+        function (m, key, value) {
+            vars[key] = value;
+        });
     return vars;
-  }
+}

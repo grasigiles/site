@@ -148,8 +148,8 @@ $("#voltar").click(function (e) {
 
 $("#codigo-ativacao-avancar").click(function (e) {
 
-    $('#aviso-codigo-ativacao').css('display', 'none');
-    $("#avancar-tab1").trigger("click");
+    //$('#aviso-codigo-ativacao').css('display', 'none');
+    //$("#avancar-tab1").trigger("click");
 
     if ($("#codigo-ativacao").val() == "") {
         $('#aviso-codigo-ativacao').css('display', 'block');

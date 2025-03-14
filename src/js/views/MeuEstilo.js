@@ -158,13 +158,9 @@ $("#codigo-ativacao-avancar").click(function (e) {
     else {
         $('#aviso-codigo-ativacao').css('display', 'none');
 
-       // if ($('#codigo-ativacao').val().toLowerCase() == "original") {
-        //    $('#aviso-codigo-ativacao').css('display', 'none');
-       //     $("#avancar-tab1").trigger("click");
-//   }
-        if ($('#codigo-ativacao').val().trim().toLowerCase() === "original") {
-    $('#aviso-codigo-ativacao').css('display', 'none');
-    $("#avancar-tab1").trigger("click");
+        if ($('#codigo-ativacao').val().trim().toLowerCase() === "cocochanel2025") {
+            $('#aviso-codigo-ativacao').css('display', 'none');
+            $("#avancar-tab1").trigger("click");
         }
         else {
             $('#aviso-codigo-ativacao').css('display', 'block');
